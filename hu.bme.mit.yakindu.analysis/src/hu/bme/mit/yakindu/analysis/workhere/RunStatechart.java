@@ -51,7 +51,8 @@ public class RunStatechart {
 				s.runCycle();
 				break;
 			case "exit":
-				System.exit(0);
+				return;
+				
 				
 			}
 			print(s);
