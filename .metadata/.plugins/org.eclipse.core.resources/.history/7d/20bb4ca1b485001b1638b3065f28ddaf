@@ -11,6 +11,6 @@ GeneratorModel for yakindu::java {
 			InterfaceObserverSupport = false
 			RuntimeService = true
 			TimerService = true
-		}
+}
 	}
 }

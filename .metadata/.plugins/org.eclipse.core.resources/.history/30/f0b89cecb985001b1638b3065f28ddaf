@@ -1,5 +1,4 @@
 package hu.bme.mit.yakindu.analysis.workhere;
-import java.io.IOException;
 import hu.bme.mit.yakindu.analysis.RuntimeService;
 import hu.bme.mit.yakindu.analysis.TimerService;
 import hu.bme.mit.yakindu.analysis.example.ExampleStatemachine;
@@ -24,14 +23,15 @@ public class RunStatechart {
 		s.init();
 		s.enter();
 		s.runCycle();
-//		s.raiseStart();
-//		s.runCycle();
-//		System.in.read();
-//		s.raiseWhite();
-//		s.runCycle();
-//		print(s);
-//		System.exit(0);
-		
+		print(s);
+		s.raiseStart();
+		s.runCycle();
+		System.in.read();
+		s.raiseWhite();
+		s.runCycle();
+		print(s);
+		System.exit(0);
+	/*	
 		while(true)
 		{
 	
@@ -56,6 +56,7 @@ public class RunStatechart {
 			}
 			print(s);
 		}
+		*/
 	}
 
 	public static void print(IExampleStatemachine s) {

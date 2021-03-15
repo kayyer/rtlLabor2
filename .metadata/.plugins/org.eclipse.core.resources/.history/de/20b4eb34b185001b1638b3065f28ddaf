@@ -8,14 +8,11 @@
       <vertices xsi:type="sgraph:State" xmi:id="_6_tyuO11Eeaky9HhW8GsWQ" name="Init" incomingTransitions="_6_4xwe11Eeaky9HhW8GsWQ">
         <outgoingTransitions xmi:id="_dL7kUO12Eeaky9HhW8GsWQ" specification="start" target="_No5UQO12Eeaky9HhW8GsWQ"/>
       </vertices>
-      <vertices xsi:type="sgraph:State" xmi:id="_MlHjEO12Eeaky9HhW8GsWQ" name="Black" incomingTransitions="_z1AC8O12Eeaky9HhW8GsWQ _JV8ksIWxEeuR8pl_kuvM2w">
+      <vertices xsi:type="sgraph:State" xmi:id="_MlHjEO12Eeaky9HhW8GsWQ" name="Black" incomingTransitions="_z1AC8O12Eeaky9HhW8GsWQ">
         <outgoingTransitions xmi:id="_k2PkoO12Eeaky9HhW8GsWQ" specification="black" target="_No5UQO12Eeaky9HhW8GsWQ"/>
         <outgoingTransitions xmi:id="_z1AC8O12Eeaky9HhW8GsWQ" specification="after 1 s/&#xD;&#xA;blackTime-=1" target="_MlHjEO12Eeaky9HhW8GsWQ"/>
       </vertices>
-      <vertices xsi:type="sgraph:State" xmi:id="_No5UQO12Eeaky9HhW8GsWQ" specification="" name="White" incomingTransitions="_dL7kUO12Eeaky9HhW8GsWQ _k2PkoO12Eeaky9HhW8GsWQ _Cde4EIWxEeuR8pl_kuvM2w">
-        <outgoingTransitions xmi:id="_Cde4EIWxEeuR8pl_kuvM2w" specification="after 1s/&#xA;whiteTime-=1" target="_No5UQO12Eeaky9HhW8GsWQ"/>
-        <outgoingTransitions xmi:id="_JV8ksIWxEeuR8pl_kuvM2w" specification="white" target="_MlHjEO12Eeaky9HhW8GsWQ"/>
-      </vertices>
+      <vertices xsi:type="sgraph:State" xmi:id="_No5UQO12Eeaky9HhW8GsWQ" specification="" name="White" incomingTransitions="_dL7kUO12Eeaky9HhW8GsWQ _k2PkoO12Eeaky9HhW8GsWQ"/>
     </regions>
   </sgraph:Statechart>
   <notation:Diagram xmi:id="_6_tyoO11Eeaky9HhW8GsWQ" type="org.yakindu.sct.ui.editor.editor.StatechartDiagramEditor" element="_6_kosO11Eeaky9HhW8GsWQ" measurementUnit="Pixel">
@@ -142,26 +139,6 @@
       <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_z1AC8-12Eeaky9HhW8GsWQ" points="[9, 7, 22, -8]$[76, 7, 89, -8]$[76, 52, 89, 37]$[-13, 52, 0, 37]$[-13, 20, 0, 5]"/>
       <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_z1AC-O12Eeaky9HhW8GsWQ" id="(0.8235294117647058,0.5849056603773585)"/>
       <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_z1AC-e12Eeaky9HhW8GsWQ" id="(0.5294117647058824,0.9056603773584906)"/>
-    </edges>
-    <edges xmi:id="_CdoCAIWxEeuR8pl_kuvM2w" type="Transition" element="_Cde4EIWxEeuR8pl_kuvM2w" source="_No7wgu12Eeaky9HhW8GsWQ" target="_No7wgu12Eeaky9HhW8GsWQ">
-      <children xsi:type="notation:DecorationNode" xmi:id="_CdqeQIWxEeuR8pl_kuvM2w" type="TransitionExpression">
-        <styles xsi:type="notation:ShapeStyle" xmi:id="_CdqeQYWxEeuR8pl_kuvM2w"/>
-        <layoutConstraint xsi:type="notation:Location" xmi:id="_CdrFUIWxEeuR8pl_kuvM2w" x="13" y="16"/>
-      </children>
-      <styles xsi:type="notation:ConnectorStyle" xmi:id="_CdoCAYWxEeuR8pl_kuvM2w" routing="Rectilinear" lineColor="4210752"/>
-      <styles xsi:type="notation:FontStyle" xmi:id="_CdpQIIWxEeuR8pl_kuvM2w" fontName="Verdana"/>
-      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_CdoCAoWxEeuR8pl_kuvM2w" points="[-28, 1, -26, -1]$[-37, 1, -35, -1]$[-37, 36, -35, 34]$[12, 36, 14, 34]$[12, 2, 14, 0]"/>
-      <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_CdyaEIWxEeuR8pl_kuvM2w" id="(0.6037735849056604,0.9622641509433962)"/>
-      <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_CdyaEYWxEeuR8pl_kuvM2w" id="(0.5471698113207547,1.0)"/>
-    </edges>
-    <edges xmi:id="_JWAPEIWxEeuR8pl_kuvM2w" type="Transition" element="_JV8ksIWxEeuR8pl_kuvM2w" source="_No7wgu12Eeaky9HhW8GsWQ" target="_MlJ_UO12Eeaky9HhW8GsWQ">
-      <children xsi:type="notation:DecorationNode" xmi:id="_JWCEQIWxEeuR8pl_kuvM2w" type="TransitionExpression">
-        <styles xsi:type="notation:ShapeStyle" xmi:id="_JWCEQYWxEeuR8pl_kuvM2w"/>
-        <layoutConstraint xsi:type="notation:Location" xmi:id="_JWCEQoWxEeuR8pl_kuvM2w" y="-14"/>
-      </children>
-      <styles xsi:type="notation:ConnectorStyle" xmi:id="_JWAPEYWxEeuR8pl_kuvM2w" routing="Rectilinear" lineColor="4210752"/>
-      <styles xsi:type="notation:FontStyle" xmi:id="_JWBdMIWxEeuR8pl_kuvM2w" fontName="Verdana"/>
-      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_JWAPEoWxEeuR8pl_kuvM2w" points="[24, -8, -89, -8]$[109, -24, -4, -24]"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>

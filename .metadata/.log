@@ -249,3 +249,100 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY org.eclipse.launchbar.core 2 0 2021-03-15 18:01:09.381
 !MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.ui 4 0 2021-03-15 18:08:38.782
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.ArithmeticException: / by zero
+	at java.base/java.math.BigDecimal.divideAndRound(BigDecimal.java:4487)
+	at java.base/java.math.BigDecimal.divide(BigDecimal.java:5564)
+	at java.base/java.math.BigDecimal.divide(BigDecimal.java:1592)
+	at org.eclipse.draw2d.geometry.PrecisionGeometry.preciseDivide(PrecisionGeometry.java:48)
+	at org.eclipse.draw2d.geometry.Vector.getAngle(Vector.java:168)
+	at org.yakindu.base.xtext.utils.gmf.routing.EdgeLabelQuery.getVectorForSegmentMoveCase(EdgeLabelQuery.java:403)
+	at org.yakindu.base.xtext.utils.gmf.routing.EdgeLabelQuery.calculateNewCenterLocation(EdgeLabelQuery.java:329)
+	at org.yakindu.base.xtext.utils.gmf.routing.EdgeLabelQuery.calculateGMFLabelOffset(EdgeLabelQuery.java:221)
+	at org.yakindu.base.xtext.utils.gmf.commands.SetLabelsOffsetOperation.computeGMFLabelOffset(SetLabelsOffsetOperation.java:153)
+	at org.yakindu.base.xtext.utils.gmf.commands.SetLabelsOffsetOperation.computeGMFLabelsOffset(SetLabelsOffsetOperation.java:126)
+	at org.yakindu.base.xtext.utils.gmf.commands.SetLabelsOffsetOperation.setLabelsToUpdate(SetLabelsOffsetOperation.java:110)
+	at org.yakindu.base.xtext.utils.gmf.commands.SetLabelsOffsetOperation.setLabelsToUpdate(SetLabelsOffsetOperation.java:85)
+	at org.yakindu.sct.ui.editor.commands.SetConnectionBendpointsAndLabelCommmand.setLabelsToUpdate(SetConnectionBendpointsAndLabelCommmand.java:87)
+	at org.yakindu.sct.ui.editor.policies.InitialPointsConnectionBendpointEditPolicy.getBendpointsChangedCommand(InitialPointsConnectionBendpointEditPolicy.java:55)
+	at org.eclipse.gmf.runtime.gef.ui.internal.editpolicies.ConnectionBendpointEditPolicy.getMoveLineSegCommand(ConnectionBendpointEditPolicy.java:624)
+	at org.eclipse.gmf.runtime.gef.ui.internal.editpolicies.ConnectionBendpointEditPolicy.getCommand(ConnectionBendpointEditPolicy.java:246)
+	at org.eclipse.gmf.runtime.diagram.ui.editpolicies.ConnectionBendpointEditPolicy.getCommand(ConnectionBendpointEditPolicy.java:67)
+	at org.eclipse.gef.editparts.AbstractEditPart.getCommand(AbstractEditPart.java:502)
+	at org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionEditPart.access$0(ConnectionEditPart.java:1)
+	at org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionEditPart$3.run(ConnectionEditPart.java:598)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.runExclusive(TransactionalEditingDomainImpl.java:328)
+	at org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionEditPart.getCommand(ConnectionEditPart.java:593)
+	at org.eclipse.gef.tools.ConnectionBendpointTracker.getCommand(ConnectionBendpointTracker.java:88)
+	at org.eclipse.gef.tools.SimpleDragTracker.handleDragInProgress(SimpleDragTracker.java:142)
+	at org.eclipse.gef.tools.AbstractTool.mouseDrag(AbstractTool.java:1114)
+	at org.eclipse.gef.tools.SelectionTool.mouseDrag(SelectionTool.java:538)
+	at org.eclipse.gef.EditDomain.mouseDrag(EditDomain.java:259)
+	at org.eclipse.gef.ui.parts.DomainEventDispatcher.dispatchMouseMoved(DomainEventDispatcher.java:363)
+	at org.eclipse.draw2d.LightweightSystem$EventHandler.mouseMove(LightweightSystem.java:543)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:216)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5797)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1374)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5051)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4583)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1474)
+
+!ENTRY org.eclipse.help 4 0 2021-03-15 18:11:58.719
+!MESSAGE Required attribute "label" missing from "topic" element in "/org.yakindu.sct.doc.user/help/user-guide/c-domain-toc.xml" (skipping element)
+
+!ENTRY org.eclipse.help 4 0 2021-03-15 18:11:58.750
+!MESSAGE Required attribute "label" missing from "topic" element in "/org.yakindu.sct.doc.user/help/user-guide/scxml_domain-toc.xml" (skipping element)
+
+!ENTRY org.eclipse.jface 2 0 2021-03-15 19:11:09.704
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-03-15 19:11:09.704
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.eof,EOF,
+		Send end of file,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@21561a02,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@59388cb4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@59388cb4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.embeddedTextEditorScope,,,system)
