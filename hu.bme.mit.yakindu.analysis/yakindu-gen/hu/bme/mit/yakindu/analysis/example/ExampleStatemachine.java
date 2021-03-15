@@ -24,12 +24,6 @@ public class ExampleStatemachine implements IExampleStatemachine {
 			black = true;
 		}
 		
-		private boolean blue;
-		
-		public void raiseBlue() {
-			blue = true;
-		}
-		
 		private long whiteTime;
 		
 		public long getWhiteTime() {
@@ -50,21 +44,10 @@ public class ExampleStatemachine implements IExampleStatemachine {
 			this.blackTime = value;
 		}
 		
-		private long blueTime;
-		
-		public long getBlueTime() {
-			return blueTime;
-		}
-		
-		public void setBlueTime(long value) {
-			this.blueTime = value;
-		}
-		
 		protected void clearEvents() {
 			start = false;
 			white = false;
 			black = false;
-			blue = false;
 		}
 	}
 	
@@ -104,8 +87,6 @@ public class ExampleStatemachine implements IExampleStatemachine {
 		sCInterface.setWhiteTime(60);
 		
 		sCInterface.setBlackTime(60);
-		
-		sCInterface.setBlueTime(60);
 	}
 	
 	public void enter() {
@@ -234,10 +215,6 @@ public class ExampleStatemachine implements IExampleStatemachine {
 		sCInterface.raiseBlack();
 	}
 	
-	public void raiseBlue() {
-		sCInterface.raiseBlue();
-	}
-	
 	public long getWhiteTime() {
 		return sCInterface.getWhiteTime();
 	}
@@ -252,14 +229,6 @@ public class ExampleStatemachine implements IExampleStatemachine {
 	
 	public void setBlackTime(long value) {
 		sCInterface.setBlackTime(value);
-	}
-	
-	public long getBlueTime() {
-		return sCInterface.getBlueTime();
-	}
-	
-	public void setBlueTime(long value) {
-		sCInterface.setBlueTime(value);
 	}
 	
 	/* Entry action for state 'Black'. */

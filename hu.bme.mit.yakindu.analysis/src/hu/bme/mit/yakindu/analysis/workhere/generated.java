@@ -42,10 +42,6 @@ case "black" :
 s.raiseBlack();
 				s.runCycle();
 				break;
-case "blue" :
-s.raiseBlue();
-				s.runCycle();
-				break;
 case "exit":
 				System.exit(0);
 				
@@ -56,6 +52,5 @@ case "exit":
 
 	public static void print(IExampleStatemachine s) {
 System.out.println("W = " + s.getSCInterface().getWhiteTime());
-System.out.println("B = " + s.getSCInterface().getBlackTime());
-System.out.println("B = " + s.getSCInterface().getBlueTime());}
+System.out.println("B = " + s.getSCInterface().getBlackTime());}
 }

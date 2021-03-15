@@ -13,8 +13,6 @@ public interface IExampleStatemachine extends ITimerCallback,IStatemachine {
 		
 		public void raiseBlack();
 		
-		public void raiseBlue();
-		
 		public long getWhiteTime();
 		
 		public void setWhiteTime(long value);
@@ -22,10 +20,6 @@ public interface IExampleStatemachine extends ITimerCallback,IStatemachine {
 		public long getBlackTime();
 		
 		public void setBlackTime(long value);
-		
-		public long getBlueTime();
-		
-		public void setBlueTime(long value);
 		
 	}
 	
